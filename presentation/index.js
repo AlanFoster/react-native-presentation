@@ -55,6 +55,16 @@ const images = {
   reduxTimeTravel: require('../assets/redux-time-travel.gif'),
 };
 
+const logos = {
+  airbnb: require('../assets/users/airbnb.png'),
+  facebook: require('../assets/users/facebook.png'),
+  gyroscope: require('../assets/users/gyroscope.png'),
+  instagram: require('../assets/users/instagram.jpg'),
+  robin: require('../assets/users/robin.png'),
+  vogue: require('../assets/users/vogue.jpg'),
+};
+
+preloader(logos);
 preloader(images);
 
 const theme = createTheme({
@@ -867,6 +877,66 @@ const styles = StyleSheet.create({
 
         <Slide transition={["slide"]}>
           <Image width="75%" src={images.reduxTimeTravel} />
+        </Slide>
+
+        <Slide transition={["slide"]}>
+          <Text textColor="tertiary">
+            Who's using it?
+          </Text>
+
+          <Layout>
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.airbnb}
+              />
+              <Text textColor='grey'>Airbnb</Text>
+            </Fill>
+
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.facebook}
+              />
+              <Text textColor='grey'>Facebook</Text>
+            </Fill>
+
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.gyroscope}
+              />
+              <Text textColor='grey'>Gyroscope</Text>
+            </Fill>
+          </Layout>
+
+          <div className='show-case__separator' />
+
+          <Layout>
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.instagram}
+              />
+              <Text textColor='grey'>Instagram</Text>
+            </Fill>
+
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.robin}
+              />
+              <Text textColor='grey'>Round Robin</Text>
+            </Fill>
+
+            <Fill>
+              <Image
+                className='show-case__logo'
+                src={logos.vogue}
+              />
+              <Text textColor='grey'>Vogue</Text>
+            </Fill>
+          </Layout>
         </Slide>
 
         <Slide transition={["spin", "slide"]} bgColor="tertiary">
