@@ -1,0 +1,15 @@
+// Extend: com.facebook.react.bridge.ReactContextBaseJavaModule
+public class PaymentModule extends ReactContextBaseJavaModule {
+    public PaymentModule(ReactApplicationContext reactContext) {
+        super(reactContext);
+    }
+
+    // ...
+
+    @Override
+    public String getName() {
+        // This will be used within our JavaScript layer
+        // when importing the library
+        return "PaymentModule";
+    }
+}

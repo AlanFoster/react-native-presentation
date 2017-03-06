@@ -1,0 +1,15 @@
+import { NativeModules } from 'react-native';
+const Payments = NativeModules.PaymentModule;
+
+class CustomComponent extends React.Component {
+  async onClick() {
+    const paymentsResponse = await Payments.makeSale({
+      foo: 123.11,
+      bar: '...'
+    });
+
+    Toast.show(JSON.stringify(paymentsResponse), Toast.SHORT);
+  }
+
+  // ...
+}

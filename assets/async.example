@@ -1,0 +1,10 @@
+const [stockItemsResponse, buttonPageResponse, employeesResponse] = await Promise.all([
+  api.getStockItems(token, storeName),
+  api.getButtonPages(token, storeName),
+  api.getEmployees(token, storeName)
+]);
+
+// Will only run once all requests have succeeded
+dispatch(stockItemsSuccess(stockItemsResponse));
+dispatch(buttonPagesSuccess(buttonPageResponse));
+dispatch(employeesSuccess(employeesResponse));

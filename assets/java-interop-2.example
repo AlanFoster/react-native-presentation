@@ -1,0 +1,9 @@
+@ReactMethod
+public void makeSale(ReadableMap sale, Promise promise) {
+    try {
+        WritableMap response = externalPaymentProvider().makeSale(sale);
+        promise.resolve(response);
+    } catch (ExternalPaymentProviderException e) {
+        promise.reject(PAYMENT_ERROR, e);
+    }
+}
