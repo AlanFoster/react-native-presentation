@@ -23,6 +23,7 @@ require("spectacle/lib/themes/default/dark.codemirror.css");
 
 import { FolderStructure, Folder, File } from './folders';
 
+import ReactExample from './react-example';
 import NativeExample from './native-example';
 import WithSlidesLink from './with-slides-link';
 import { IPhone, Android } from './phones';
@@ -77,29 +78,6 @@ const theme = createTheme({
   secondary: "Helvetica"
 });
 
-const basicReactExample = `
-// Everything extends React.Component
-class MyComponent extends React.Component {
-  render() {
-    return (
-      <div>
-        Hello World!
-      </div>
-    );
-  }
-}
-
-render(<MyComponent />, mountNode);
-`;
-
-
-const BasicExample = ({code }) => (
-  <ComponentPlayground
-    theme="dark"
-    code={code || basicReactExample}
-  />
-);
-
 // Useful links:
 // http://www.reactnativeexpress.com/
 // https://code.facebook.com/posts/1014532261909640/react-native-bringing-modern-web-techniques-to-mobile/
@@ -146,7 +124,7 @@ export default WithSlidesLink(class Presentation extends React.Component {
             Change MyComponent to Foo, see it break.
           `}
         >
-          <BasicExample />
+          <ReactExample />
         </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
@@ -172,7 +150,7 @@ export default WithSlidesLink(class Presentation extends React.Component {
               render(<Application title='Hello world!' />, mountNode);
           `}
         >
-          <BasicExample />
+          <ReactExample />
         </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
@@ -199,7 +177,7 @@ export default WithSlidesLink(class Presentation extends React.Component {
               render(<Person name='Gordon' age={27} />, mountNode);
           `}
         >
-          <BasicExample />
+          <ReactExample />
         </Slide>
 
         <Slide transition={["zoom", "fade"]} bgColor="primary">
