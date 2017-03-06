@@ -622,7 +622,7 @@ To run your app on Android:
             How it works
           </Text>
 
-          <Image width="75%" src={images.howItWorks}/>
+          <Image style={{ margin: 30 }} src={images.howItWorks}/>
         </Slide>
 
         <Slide transition={["slide"]}>
